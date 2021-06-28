@@ -1,7 +1,6 @@
 import java.util.*;
 public class evenodd {
     public static void main(String[] args) {
-        System.out.println("enter n");
         int n=50;
         while(n>=10){
             System.out.println(n);
