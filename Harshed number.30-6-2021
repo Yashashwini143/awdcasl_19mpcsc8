@@ -1,0 +1,28 @@
+import java.util.*;
+class Harshed
+{
+public static void main(String args[])
+{
+int n,rem,sum=0,temp;
+Scanner sc=new Scanner (System.in);
+System.out.println("enter n:");
+n=sc.nextInt();
+temp=n;
+while(n>0)
+{
+rem=n%10;
+sum=sum+rem;
+n=n/10;
+}
+if(temp%sum==0)
+System.out.println(temp+" is harshed number");
+else
+System.out.println(temp+" is not harshed number");
+}}
+Output:
+enter n:
+156
+156 is harshed number
+enter n:
+22
+22 is not harshed number
