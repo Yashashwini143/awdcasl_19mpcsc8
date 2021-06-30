@@ -1,0 +1,31 @@
+import java.util.*;
+class Replace
+{
+public static void main(String args[])
+{
+int n,x,y,r;
+int rep_num=0,mul=1;
+Scanner sc=new Scanner (System.in);
+System.out.println("num x should be replaced by y:");
+System.out.println("enter n,x,y:");
+n=sc.nextInt();
+x=sc.nextInt();
+y=sc.nextInt();
+while(n>0)
+{
+r=n%10;
+if(r==x)
+r=y;
+rep_num=r*mul+rep_num;
+mul=mul*10;
+n=n/10;
+}
+System.out.println(rep_num);
+}}
+Output:
+num x should be replaced by y:
+enter n,x,y:
+16179
+1
+8
+86879
