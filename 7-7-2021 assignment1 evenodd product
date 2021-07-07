@@ -1,0 +1,36 @@
+import java.util.*;
+class evenoddnum
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter array size:");
+        int size=sc.nextInt();
+        int i,e=0,o=0;
+        int a[]=new int[size];
+        System.out.print("enter array elements:");
+        for(i=0;i<size;i++)
+        {
+            a[i]=sc.nextInt();
+            
+        }
+        for(i=0;i<size;i++)
+        {
+            if(a[i]%2==0)
+            e=e+1;
+            else
+            o=o+1;
+            
+        }
+        System.out.println("count of even numbers is: "+e);
+        System.out.println("count of odd numbers is: "+o);
+        int p=e*o;
+        System.out.println(p);
+        if(p%2==0)
+        System.out.println("product is even");
+        else
+        System.out.println("product is odd");
+        
+    }
+    
+}
