@@ -1,0 +1,21 @@
+class Solution {
+    public int[] plusOne(int[] digits) {
+        int carry = 0;
+        for(int i = digits.length-1; i >=0; i--){
+            carry = (digits[i] + 1) / 10;
+            digits[i] = (digits[i] + 1) % 10;
+            if (carry == 0) return digits;
+        }
+        int[] value = new int[digits.length+1];
+        value[0] = 1;
+        return value;
+       
+    }
+}
+input
+[1,2,3]
+Output
+[1,2,4]
+Expected
+[1,2,4]
+https://leetcode.com/problems/plus-one/submissions/
