@@ -1,0 +1,36 @@
+import java.util.*;
+import java.lang.*;
+class palindrome
+{
+public static void main(String args[])
+{
+String str;
+int i,count=0;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter String:"); 
+str=sc.next();
+char ch[]=str.toCharArray();
+int n=ch.length;
+char s[]=new char[n];
+for(i=0;i<n;i++)
+{
+s[i]=ch[n-1-i];
+}
+for(i=0;i<n;i++)
+{
+if(s[i]==ch[i])
+{
+count++;
+}}
+if(count==s.length)
+System.out.println("palindrome");
+else
+System.out.println("Not palindrome");
+}}
+output:
+enter String:
+yashashwini sampatirao
+Not palindrome
+enter String:
+madam
+palindrome
