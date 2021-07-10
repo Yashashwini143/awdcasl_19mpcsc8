@@ -1,0 +1,15 @@
+import java.util.*;
+ public class upper 
+ {
+     public static void main(String[] args)
+     {	
+         Scanner sc = new Scanner(System.in);
+         System.out.print("enter a upper String: ");
+         String line = sc.nextLine();
+	 line = line.toLowerCase();
+	 System.out.println("yashashwini"); 
+	 }			
+}
+output:
+enter a upper String: YASHASHWINI
+yashashwini
