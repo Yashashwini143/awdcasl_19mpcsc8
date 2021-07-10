@@ -1,0 +1,22 @@
+class Solution {
+    public void helper(char[] s, int left, int right) {
+    if (left >= right) return;
+    char tmp = s[left];
+    s[left++] = s[right];
+    s[right--] = tmp;
+    helper(s, left, right);
+  }
+
+    public void reverseString(char[] s) {
+        helper(s, 0, s.length - 1);
+        
+    }
+}
+output:
+input
+["h","e","l","l","o"]
+Output
+["o","l","l","e","h"]
+Expected
+["o","l","l","e","h"]
+https://leetcode.com/problems/reverse-string/submissions/
