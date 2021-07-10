@@ -1,0 +1,31 @@
+ 
+import java.util.Scanner;
+ 
+public class string_reverse
+{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("enter a string : ");
+ 
+        String sc = scanner.nextLine();
+        scanner.close();
+ 
+        String words[] = sc.split("\\s");
+        String reversedString = "";
+ 
+        for (int i = 0; i < words.length; i++) 
+        {
+            String word = words[i];
+            String reverseWord = "";
+            for (int j = word.length() - 1; j >= 0; j--) {
+                reverseWord = reverseWord + word.charAt(j);
+            }
+            reversedString = reversedString + reverseWord + " ";
+        }
+ 
+        System.out.print("Reversed string : " + reversedString);
+    }
+}
+output:
+enter a string : yashashwini sampatirao
+Reversed string : iniwhsahsay oaritapmas 
