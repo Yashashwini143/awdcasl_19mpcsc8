@@ -1,0 +1,18 @@
+import java.lang.*;
+public class stringreverse {
+   public static void main(String[] args) {
+      String str = "very good!";
+      String newPos = "hi";
+      int index = 0;
+      System.out.println("Initial String = " + str);
+      System.out.println("Index where new string will be inserted = " + index);
+      StringBuffer resString = new StringBuffer(str);
+      resString.insert(index + 1, newPos);
+      resString.insert(index + 8, newPos);
+      System.out.println("Resultant String = "+resString.toString());
+   }
+}
+output:
+Initial String = very good!
+Index where new string will be inserted = 0
+Resultant String = vhiery ghiood!
