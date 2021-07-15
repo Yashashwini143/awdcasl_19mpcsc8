@@ -1,0 +1,27 @@
+class Solution {
+    public int[] sortArrayByParityII(int[] nums) {
+        Stack<Integer> evenStack = new Stack<>();
+        Stack<Integer> oddStack = new Stack<>();
+        
+        for (int i : nums) {
+            if (i % 2 == 0) {
+                evenStack.push(i);
+            } else {
+                oddStack.push(i);
+            }
+        }
+        
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = i % 2 == 0 ? evenStack.pop() : oddStack.pop();
+        }
+        
+        return nums;
+    }
+}
+output:
+Your input
+[4,2,5,7]
+Output
+[2,7,4,5]
+Expected
+[4,5,2,7]
