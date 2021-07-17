@@ -1,0 +1,30 @@
+import java.util.*;
+class updatevalue
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+ArrayList<Integer>a=new ArrayList<Integer>();
+System.out.println("enter array size:");
+int n=sc.nextInt();
+System.out.println("enter array elements:");
+for(int i=0;i<n;i++)
+{
+a.add(sc.nextInt());
+}
+System.out.println("enter search key:");
+int key=sc.nextInt();
+if(a.contains(key))
+{
+int p=a.indexOf(key);
+System.out.println("enter replace value:");
+int val=sc.nextInt();
+a.set(p,val);
+System.out.println("updated list:");
+System.out.print(a);
+}
+else
+{
+System.out.println("False");
+}
+}
