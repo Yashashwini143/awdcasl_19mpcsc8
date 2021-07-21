@@ -1,0 +1,30 @@
+import java.util.*;
+class iterators
+{
+    public static void main(String[] args) 
+  {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter n value"); 
+        int n=sc.nextInt();
+        ArrayList<Integer>a=new ArrayList<Integer>();
+        for(int i=0;i<n;i++)
+        a.add(sc.nextInt());
+        System.out.println("enter the value u want to check");
+        int k=sc.nextInt();
+        Iterator<Integer>it=a.iterator();
+        while(it.hasNext())
+        {
+            if(it.next()<=k)
+            it.remove();
+        }
+      for(Integer i:a)
+          System.out.print(i+" "); 
+    }
+}
+output:
+enter n value
+7
+30 40 15 20 25 7 99
+enter the value u want to check
+20
+30 40 25 99 
