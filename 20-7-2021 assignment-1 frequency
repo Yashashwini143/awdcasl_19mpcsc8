@@ -1,0 +1,50 @@
+import java.util.*;
+class Frequency 
+{
+public static void main(String args[])
+{
+HashMap<String,Integer>h=new HashMap<String,Integer>();
+Scanner sc=new Scanner(System.in);
+System.out.println("enter n value");
+int n=sc.nextInt();
+String s[] =new String[n];
+for(int i=0;i<n;i++)
+      s[i]=sc.next();
+for(int i=0;i<n;i++)
+{
+if(h.containsKey(s[i]))
+     h.put(s[i],h.get(s[i])+1);
+else
+     h.put(s[i],1);
+}
+for(Map.Entry<String,Integer>i:h.entrySet())
+{
+if(i.getValue()>2)
+System.out.println(i);
+}
+}
+}
+output:
+enter n value
+9
+Rama
+
+Gita
+
+Rama
+
+Lakshmi
+
+Rama
+
+Gita
+
+Lakshmi
+
+Sita
+
+Lakshmi
+
+
+Rama=3
+Lakshmi=3
