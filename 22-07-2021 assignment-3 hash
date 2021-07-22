@@ -1,0 +1,47 @@
+import java.util.*;
+  
+public class Hash_Table_Demo {
+    public static void main(String[] args)
+    {
+  
+        // Creating an empty Hashtable
+        Hashtable<Integer, Integer> hash_table = 
+                           new Hashtable<Integer,Integer >();
+  
+        // Inserting the values into table
+        hash_table.put(101,45000);
+        hash_table.put(102,40000);
+        hash_table.put(103,35000);
+        hash_table.put(104,45000);
+        hash_table.put(105,40000);
+  
+        
+        
+        System.out.println("Initial table is: "+hash_table);
+        Scanner sc=new Scanner(System.in);
+      
+        System.out.println("enter key value");
+          int h=sc.nextInt();
+        
+        if(h>=106)
+        {
+            System.out.println("value not found");
+        }
+        else
+        {
+            hash_table.put(h,(hash_table.get(h)+5000));
+        System.out.println("Initial table is: " + hash_table);
+        }
+        
+    }
+}
+output1:
+Initial table is: {105=40000, 104=45000, 103=35000, 102=40000, 101=45000}
+enter key value
+109
+value not found
+output2:
+Initial table is: {105=40000, 104=45000, 103=35000, 102=40000, 101=45000}
+enter key value
+103
+Initial table is: {105=40000, 104=45000, 103=40000, 102=40000, 101=45000}
