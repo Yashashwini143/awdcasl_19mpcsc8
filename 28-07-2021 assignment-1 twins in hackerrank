@@ -1,0 +1,51 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+		int x = sc.nextInt();
+		int y = sc.nextInt();
+		int lastPrime = -100;
+		int twins = 0;
+
+		for (int i = x; i < y + 1; i ++) {
+			if (isPrime(i)) {
+				if (i - lastPrime == 2) {
+					twins++;
+				}
+				lastPrime = i;
+			}
+		}
+		System.out.println(twins);
+
+	}
+
+	static boolean isPrime(int n) {
+		if (n == 1) {
+			return false;
+		}
+		if (n == 2) {
+			return true;
+		}
+		if ((n & 1) == 0) {
+			return false;
+		}
+
+		for (int i = 3; i*i <= n ; i += 2) {
+			if (n % i == 0) {
+				return false;
+			}
+		}
+		return true;
+	}
+}
+output:
+Input (stdin)
+3 13
+Your Output (stdout)
+3
+Expected Output
+3
+https://www.hackerrank.com/challenges/twins/problem
