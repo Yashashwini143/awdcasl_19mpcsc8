@@ -1,0 +1,48 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        LinkedList<Integer> l = new LinkedList<>();
+        int q = in.nextInt();
+        while (q-- > 0) {
+            int type = in.nextInt();
+            if (type == 1) {
+                l.add(in.nextInt());
+            }
+            else if (type == 2) {
+                if (!l.isEmpty()) {
+                    l.pollFirst();
+                }
+            }
+            else {
+                System.out.println(l.getFirst());
+            }
+        }
+    }
+}
+output:
+Input (stdin)
+10
+1 42
+2
+1 14
+3
+1 28
+3
+1 60
+1 78
+2
+2
+Your Output (stdout)
+14
+14
+Expected Output
+14
+14
+https://www.hackerrank.com/challenges/queue-using-two-stacks/problem
