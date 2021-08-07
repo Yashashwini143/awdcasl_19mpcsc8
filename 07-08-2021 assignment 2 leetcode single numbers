@@ -1,0 +1,28 @@
+class Solution {
+    public int singleNumber(int[] nums) {
+           HashMap<Integer, Integer> hash = new HashMap<Integer, Integer>();
+        for(int i=0;i<nums.length;i++)
+        {
+            if(hash.containsKey(nums[i]))
+            {
+                hash.put(nums[i],hash.get(nums[i])-1);
+                if(hash.get(nums[i])==0)
+                    hash.remove(nums[i]); // removing numbers whose presence is spotted in array 3 times
+            }
+            else
+                hash.put(nums[i],2);
+        }// at the end of this loop only the number with the single frequency will be present in the map
+        Set<Map.Entry<Integer, Integer>> entrySet = hash.entrySet();//changing hashmap to set
+        Iterator<Map.Entry<Integer, Integer>> iterator = entrySet.iterator();//iterating the set
+        return(iterator.next().getKey());//getting the only value from the set
+    }
+        
+    }
+    output:
+    Your input
+[2,2,3,2]
+Output
+3
+Expected
+3
+https://leetcode.com/problems/single-number-ii/submissions/
